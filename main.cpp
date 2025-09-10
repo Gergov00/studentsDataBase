@@ -9,7 +9,6 @@ struct Student {
     double gpa;
 };
 
-// Функция для добавления студента в базу данных
 void addStudent(std::vector<Student>& database) {
     Student student;
     std::cout << "Введите имя студента: ";
@@ -33,6 +32,17 @@ void displayStudents(const std::vector<Student>& database) {
         std::cout << "Возраст: " << student.age << "\n";
         std::cout << "Специальность: " << student.major << "\n";
         std::cout << "Средний балл: " << student.gpa << "\n\n";
+    }
+}
+
+void search_by_name_or_specialty(const std::vector<Student> &database, const std::string target) {
+    for(const Student &student : database) {
+        if(student.name == target || student.major == target) {
+            std::cout << "Имя: " << student.name << "\n";
+            std::cout << "Возраст: " << student.age << "\n";
+            std::cout << "Специальность: " << student.major << "\n";
+            std::cout << "Средний балл: " << student.gpa << "\n\n";
+        }
     }
 }
 
