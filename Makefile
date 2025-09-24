@@ -37,6 +37,7 @@ coverage:
 
 	gcovr --gcov-executable gcov-13 \
 		--html-details -o $(COVERAGE_DIR)/coverage.html \
+		--lcov -o $(COVERAGE_DIR)/coverage.lcov \
 		--filter "$(realpath $(LIB_SOURCES))" \
 		--print-summary \
 		--root . \

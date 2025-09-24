@@ -1,0 +1,1 @@
+[![codecov](https://app.codecov.io/github/Gergov00/studentsDataBase/graph/badge.svg)](https://app.codecov.io/github/Gergov00/studentsDataBase)
