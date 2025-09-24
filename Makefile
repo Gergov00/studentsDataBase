@@ -35,13 +35,13 @@ coverage:
 	
 	./$(COVERAGE_DIR)/$(TEST_TARGET)_coverage
 
-	gcovr --gcov-executable gcov-13 \
-		--html-details -o $(COVERAGE_DIR)/coverage.html \
-		--lcov -o $(COVERAGE_DIR)/coverage.lcov \
-		--filter "$(LIB_SOURCES)" \
-		--print-summary \
-		--root . \
-		$(COVERAGE_DIR)
+	gcovr --gcov-executable gcov-13 --root . \
+		--lcov -o coverage_report/coverage.lcov \
+		--filter "student_database.cpp"
+	
+	gcovr --gcov-executable gcov-13 --root . \
+		--html-details -o coverage_report/index.html \
+		--filter "student_database.cpp" --print-summary
 
 
 clean:
